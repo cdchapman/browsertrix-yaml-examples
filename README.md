@@ -8,10 +8,17 @@ This includes all sub domains like abc.collection.litme.com.ua, handles http:// 
     collection: "collection-litme-com-ua"
     workers: 16
     saveState: always
+    blockRules:
+      - url: google-analytics.com
+      - url: youtube.com/embed/
+      - url: yandex.ru
+      - url: mycounter.ua
+      - url: googletagmanager.com
+      - url: facebook.(com|net)
     seeds:
         - url: http://collection.litme.com.ua/
           scopeType: "domain"
-    
+
 ## Excluding trouble
 
 If you notice that a crawl is collecting duplicate links due to parameters, like 
